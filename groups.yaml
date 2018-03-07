@@ -1,0 +1,20 @@
+#default_view:
+#  view: yes
+#  entities:
+#    - group.Hue
+
+Hue:
+  view: no
+  entities:
+    - sensor.basement_motion_sensor
+#    - sensor.basement_temperature
+#    - sensor.basement_light_level
+#    - sensor.basement_lux
+
+Nest:
+  view: no
+  entities:
+    - sensor.temperature
+    - sensor.target
+    - sensor.humidity
+    - sensor.hvac_state

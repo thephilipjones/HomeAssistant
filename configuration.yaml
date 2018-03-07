@@ -1,0 +1,149 @@
+homeassistant:
+  name: Home
+  latitude: !secret home_latitude
+  longitude: !secret home_longitude
+  elevation: 80
+  unit_system: imperial
+  time_zone: America/New_York
+
+#  customize: !include customize.yaml
+  customize: !include_dir_merge_named customize
+  customize_glob:
+    "sensor.dark_sky_*":
+      homebridge_hidden: true
+  packages: !include_dir_named packages
+
+zone:
+  - name: ScienceLogic
+    latitude: !secret sciencelogic_latitude
+    longitude: !secret sciencelogic_longitude
+    radius: 500
+    icon: mdi:briefcase
+
+#introduction:
+frontend:
+#  javascript_version: latest
+
+discovery:
+
+logbook:
+  exclude:
+    entities:
+      - sensor.since_last_boot
+      - sensor.since_last_boot_templated
+      - sensor.time
+      - sensor.date
+      - sensor.ha_uptime
+
+history:
+  include:
+    domains:
+      - sensor
+      - switch
+      - media_player
+      - light
+      - binary_sensor
+      - cover
+
+  exclude:
+    entities:
+     - sensor.last_boot
+     - sensor.date
+     - sensor.since_last_boot
+     - sensor.since_last_boot_templated
+     - sensor.ha_uptime
+     - sensor.time
+
+cloud:
+
+config:
+
+http:
+  # Secrets are defined in the file secrets.yaml
+  api_password: !secret http_password
+  # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+  # base_url: example.duckdns.org:8123
+
+# Checks for available updates
+updater:
+  # Optional, allows Home Assistant developers to focus on popular components.
+  # include_used_components: true
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Enables a map showing the location of tracked devices
+map:
+
+ios: 
+
+#ifttt:
+#  key: !secret ifttt_key
+
+zwave:
+  usb_path: /dev/ttyUSB0
+
+zha:
+  usb_path: /dev/ttyUSB1
+  database_path: /home/homeassistant/.homeassistant/zigbee.db
+
+sun:
+
+light:
+  - platform: hue
+#    host: 10.0.1.92
+
+hue:
+  bridges:
+    - host: 10.0.1.21
+      filename: phue.conf
+      allow_unreachable: true
+      allow_hue_groups: false
+
+august:
+  login_method: email
+  username: !secret august_username
+  password: !secret august_password
+
+media_player:
+  - platform: denonavr
+  - platform: plex
+
+nest:
+  client_id: !secret nest_id
+  client_secret: !secret nest_secret
+#  binary_sensors:
+#    monitored_conditions:
+#      - 'fan'
+
+climate:
+  platform: nest
+
+device_tracker:
+#  - platform: unifi_direct
+- platform: unifi
+#  host: raspberrypi.local
+  username: !secret unifi_username
+  password: !secret unifi_password
+  verify_ssl: false
+#  track_new_devices: no
+
+# Text to speech
+tts:
+  - platform: google
+
+group: !include_dir_merge_named group
+# device_tracker: !include_dir_merge_list device_tracker
+sensor: !include_dir_merge_list sensor
+# automation: !include_dir_merge_list automation
+# scene: !include_dir_merge_list scene
+# switch: !include_dir_merge_list switch
+# script: !include_dir_merge_named script
+# input_boolean: !include_dir_merge_named input_boolean
+# shell_command: !include_dir_merge_named shell_command
+
+input_boolean: !include input_boolean.yaml
+
+# group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml

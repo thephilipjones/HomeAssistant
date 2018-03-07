@@ -1,0 +1,177 @@
+climate.living_room:
+  platform: nest
+  unique_id: Q4l-MSBWXrDjvwoAbg7nj1_mp_sLciBS
+light.sunroom_1:
+  platform: hue
+  unique_id: 00:17:88:01:10:30:5a:60-0b
+light.bedroom_1:
+  platform: hue
+  unique_id: 00:17:88:01:03:6c:8c:43-0b
+light.bedroom_2:
+  platform: hue
+  unique_id: 00:17:88:01:02:c9:6f:32-0b
+light.basement_2:
+  platform: hue
+  unique_id: 00:17:88:01:10:46:54:9d-0b
+light.living_room_lightstrip:
+  platform: hue
+  unique_id: 00:17:88:01:01:1b:86:cb-0b
+light.basement_1:
+  platform: hue
+  unique_id: 00:17:88:01:10:46:4e:c1-0b
+light.dining_room_2:
+  platform: hue
+  unique_id: 00:17:88:01:10:53:a9:bb-0b
+light.dining_room_1:
+  platform: hue
+  unique_id: 00:17:88:01:10:47:ab:65-0b
+light.dining_room_lightstrip:
+  platform: hue
+  unique_id: 00:17:88:01:01:1c:04:7d-0b
+light.kitchen_lightstrip:
+  platform: hue
+  unique_id: 00:17:88:01:02:15:ee:df-0b
+light.living_room_1:
+  platform: hue
+  unique_id: 00:17:88:01:10:47:ab:e2-0b
+light.living_room_2:
+  platform: hue
+  unique_id: 00:17:88:01:10:47:ab:e4-0b
+light.basement_lightstrip:
+  platform: hue
+  unique_id: 00:17:88:01:02:17:73:11-0b
+light.sunroom_2:
+  platform: hue
+  unique_id: 00:17:88:01:10:46:52:d0-0b
+light.front_porch_1:
+  platform: hue
+  unique_id: 00:17:88:01:10:46:51:c1-0b
+sensor.iphone_x_battery_state:
+  platform: ios
+  unique_id: state_iphone_x
+sensor.philips_ipad_battery_state:
+  platform: ios
+  unique_id: state_philips_ipad
+sensor.philips_ipad_battery_level:
+  platform: ios
+  unique_id: level_philips_ipad
+sensor.iphone_x_battery_level:
+  platform: ios
+  unique_id: level_iphone_x
+binary_sensor.living_room_sensor:
+  platform: zwave
+  unique_id: 2-72057594076463104
+sensor.living_room_temperature:
+  platform: zwave
+  unique_id: 2-72057594076479506
+sensor.living_room_luminance:
+  platform: zwave
+  unique_id: 2-72057594076479538
+sensor.living_room_relative_humidity:
+  platform: zwave
+  unique_id: 2-72057594076479570
+sensor.living_room_alarm_type:
+  platform: zwave
+  unique_id: 2-72057594077528065
+sensor.living_room_alarm_level:
+  platform: zwave
+  unique_id: 2-72057594077528081
+sensor.living_room_sourcenodeid:
+  platform: zwave
+  unique_id: 2-72057594077528097
+sensor.living_room_burglar:
+  platform: zwave
+  unique_id: 2-72057594077528225
+sensor.living_room_power_management:
+  platform: zwave
+  unique_id: 2-72057594077528241
+sensor.living_room_system:
+  platform: zwave
+  unique_id: 2-72057594077528257
+sensor.living_room_emergency:
+  platform: zwave
+  unique_id: 2-72057594077528273
+sensor.living_room_clock:
+  platform: zwave
+  unique_id: 2-72057594077528289
+sensor.downstairs_humidifier_energy:
+  platform: zwave
+  unique_id: 3-72057594093273090
+sensor.downstairs_humidifier_previous_reading:
+  platform: zwave
+  unique_id: 3-72057594093273106
+sensor.downstairs_humidifier_power:
+  platform: zwave
+  unique_id: 3-72057594093273218
+sensor.downstairs_humidifier_voltage:
+  platform: zwave
+  unique_id: 3-72057594093273346
+sensor.downstairs_humidifier_current:
+  platform: zwave
+  unique_id: 3-72057594093273410
+switch.downstairs_humidifier_switch:
+  platform: zwave
+  unique_id: 3-72057594093060096
+binary_sensor.bedroom_sensor:
+  platform: zwave
+  unique_id: 4-72057594110017536
+sensor.bedroom_temperature:
+  platform: zwave
+  unique_id: 4-72057594110033938
+sensor.bedroom_luminance:
+  platform: zwave
+  unique_id: 4-72057594110033970
+sensor.bedroom_relative_humidity:
+  platform: zwave
+  unique_id: 4-72057594110034002
+sensor.bedroom_alarm_type:
+  platform: zwave
+  unique_id: 4-72057594111082497
+sensor.bedroom_alarm_level:
+  platform: zwave
+  unique_id: 4-72057594111082513
+sensor.bedroom_sourcenodeid:
+  platform: zwave
+  unique_id: 4-72057594111082529
+sensor.bedroom_burglar:
+  platform: zwave
+  unique_id: 4-72057594111082657
+sensor.bedroom_power_management:
+  platform: zwave
+  unique_id: 4-72057594111082673
+sensor.bedroom_clock:
+  platform: zwave
+  unique_id: 4-72057594111082721
+switch.plug_switch:
+  platform: zwave
+  unique_id: 5-72057594126614528
+sensor.plug_energy:
+  platform: zwave
+  unique_id: 5-72057594126827522
+sensor.plug_previous_reading:
+  platform: zwave
+  unique_id: 5-72057594126827538
+sensor.plug_power:
+  platform: zwave
+  unique_id: 5-72057594126827650
+sensor.plug_voltage:
+  platform: zwave
+  unique_id: 5-72057594126827778
+sensor.plug_current:
+  platform: zwave
+  unique_id: 5-72057594126827842
+media_player.atv_sunroom:
+  platform: apple_tv
+  unique_id: dfc93138a2beac73e20f5018a5af7706dd84f8b550213db8845064c82ea82cb1
+remote.atv_sunroom:
+  platform: apple_tv
+  unique_id: dfc93138a2beac73e20f5018a5af7706dd84f8b550213db8845064c82ea82cb1
+media_player.bedroom:
+  platform: apple_tv
+  unique_id: d81a424c4bf14cf7e61f7efc286f6142f687573690f7879700b5686a2ee7dc5f
+remote.bedroom:
+  platform: apple_tv
+  unique_id: d81a424c4bf14cf7e61f7efc286f6142f687573690f7879700b5686a2ee7dc5f
+media_player.sunroom_tv:
+  platform: cast
+  unique_id: 9432a32a-a266-7063-1cd6-5f338445bfc5
