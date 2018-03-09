@@ -5,6 +5,8 @@
 secrets.yaml
 known_devices.yaml
 
+!README.md
+
 !/automations/
 !/custom_components/
 !/customize/
