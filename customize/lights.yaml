@@ -1,0 +1,6 @@
+light.bedroom:
+  friendly_name: 'Bedroom'
+  
+  hidden: False
+  homebridge_hidden: True
+

@@ -1,0 +1,48 @@
+downstairs:
+  name: Downstairs
+  view: yes
+  entities:
+    # - group.all_locks
+    - lock.front_door
+    - group.back_door_sensor
+    - group.living_room_sensor
+    - switch.downstairs_humidifier_switch
+    - climate.living_room
+    - group.nest
+    - group.media
+    - group.downstairs_lights
+
+upstairs:
+  name: Upstairs
+  view: yes
+  entities:
+   - group.upstairs_lights
+
+living_room:
+  name: Living Room
+  view: no
+  entities:
+    - group.living_room_lights
+
+kitchen:
+  name: Kitchen
+  view: no
+  entities:
+    - group.kitchen_lights
+
+bedroom:
+  name: Bedroom
+  view: no
+  entities:
+    - group.bedroom_lights
+    - group.bedroom_sensor
+    - group.bedroom_plug
+    - media_player.bedroom
+    - remote.bedroom
+
+basement:
+  name: Basement
+  view: yes
+  entities:
+    - group.basement_lights
+    - group.basement_sensor

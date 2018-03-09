@@ -1,0 +1,58 @@
+###################################
+##  Nest Section
+###################################
+climate.living_room:
+  friendly_name: 'Nest Living Room'
+  icon: mdi:air-conditioner
+  
+###################################
+##  Sun Section
+###################################
+sun.sun:
+#  hidden: true
+  homebridge_hidden: True
+
+###################################
+##  Dark Sky Section
+###################################
+sensor.darksky:
+  friendly_name: 'Dark Sky'
+  homebridge_hidden: True
+
+
+sensor.dark_sky_cloud_coverage:
+  homebridge_hidden: True
+
+
+sensor.dark_sky_minutely_summary:
+  homebridge_hidden: True
+
+
+sensor.dark_sky_nearest_storm_distance:
+  homebridge_hidden: True
+
+
+sensor.dark_sky_precip_intensity:
+  homebridge_hidden: True
+
+
+sensor.dark_sky_daily_max_precip_intensity:
+  homebridge_hidden: True
+
+
+sensor.dark_sky_wind_speed:
+  homebridge_hidden: True
+
+
+sensor.dark_sky_humidity:
+  homebridge_hidden: True
+
+
+sensor.dark_sky_temperature:
+  homebridge_hidden: True
+
+
+sensor.dark_sky_uv_index:
+  homebridge_hidden: True
+
+

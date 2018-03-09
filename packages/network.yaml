@@ -1,0 +1,24 @@
+group:
+  network:
+    entities:
+      - sensor.ha_installed_version
+      - sensor.ha_uptime
+      - sensor.since_last_boot_templated
+      - sensor.disk_used_
+      - sensor.database_sensor
+      - sensor.speedtest_download
+      - sensor.speedtest_upload
+      - binary_sensor.carlowink
+      - sensor.network
+      - sensor.network_detail
+
+  network_detail:
+    entities:
+      - device_tracker.downstairs_echo
+      - device_tracker.bedroom_echo
+      - device_tracker.basement_echo_dot
+      - device_tracker.hue_hub
+      - device_tracker.nest_living_room
+      - device_tracker.rachel_iphone
+      - device_tracker.unifi_ap
+      - device_tracker.withings_scale

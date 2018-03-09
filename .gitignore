@@ -4,3 +4,11 @@
 !.gitignore
 secrets.yaml
 known_devices.yaml
+
+!/automations/
+!/custom_components/
+!/customize/
+!/groups/
+!/packages/
+!/scripts/
+!/sensor/

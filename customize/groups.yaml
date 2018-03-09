@@ -1,0 +1,106 @@
+group.home_assistant
+  order: 1
+
+group.raspberry_pi
+  order: 2
+
+group.zwave
+  order: 3
+
+group.time
+  order: 4
+
+group.all_automations:
+  friendly_name: 'All Automations'
+  hidden: False
+  homebridge_hidden: true
+
+group.all_devices:
+  friendly_name: 'All Devices'
+  hidden: True
+  homebridge_hidden: true
+
+group.all_lights:
+  friendly_name: 'All Lights'
+  hidden: True
+
+group.all_remotes:
+  friendly_name: 'All Remotes'
+  hidden: False
+  homebridge_hidden: true
+
+group.all_scripts:
+  friendly_name: 'All Scripts'
+  hidden: False
+  homebridge_hidden: true
+
+group.all_switches:
+  friendly_name: 'All Switches'
+  hidden: False
+
+group.bedroom_lights:
+  friendly_name: 'Bedroom Lights'
+  hidden: False
+
+group.dining_room_lights:
+  friendly_name: 'Dining Room Lights'
+  hidden: False
+
+group.exterior_lights:
+  friendly_name: 'Exterior Lights'
+  hidden: False
+
+group.home_modes:
+  friendly_name: 'Home Modes'
+  hidden: False
+  homebridge_hidden: true
+
+group.interior_lights:
+  friendly_name: 'Interior Lights'
+  hidden: False
+
+group.kitchen_lights:
+  friendly_name: 'Kitchen Lights'
+  hidden: False
+
+group.living_room_lights:
+  friendly_name: 'Living Room Lights'
+  hidden: False
+
+group.media_players:
+  friendly_name: 'Media Players'
+  hidden: False
+  homebridge_hidden: true
+
+group.network:
+  friendly_name: 'Network'
+  hidden: False
+  homebridge_hidden: true
+
+group.network_detail:
+  friendly_name: 'Network Detail'
+  hidden: False
+  homebridge_hidden: true
+
+group.outdoor_front_lights:
+  friendly_name: 'Outdoor Front Lights'
+  hidden: False
+
+group.sensors:
+  friendly_name: 'Sensors'
+  hidden: False
+  homebridge_hidden: true
+
+group.switches:
+  friendly_name: 'Switches'
+  hidden: False
+  homebridge_hidden: true
+
+group.upstairs_lights:
+  friendly_name: 'Upstairs Lights'
+  hidden: False
+
+group.weather:
+  friendly_name: 'Weather'
+  hidden: False
+  homebridge_hidden: true

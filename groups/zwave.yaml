@@ -1,0 +1,10 @@
+zwave:
+  name: Z-Wave
+  view: no
+  entities:
+    - zwave.sigma_designs_uzb_zwave_usb_adapter
+    - zwave.back_door
+    - zwave.downstairs_humdifier
+    - zwave.living_room
+    - zwave.bedroom
+    - zwave.plug

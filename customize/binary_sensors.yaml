@@ -1,0 +1,41 @@
+binary_sensor.living_room_thermostat_fan:
+  friendly_name: 'Living Room Thermostat Fan'
+  
+  hidden: True
+  homebridge_hidden: True
+
+
+binary_sensor.living_room_thermostat_has_leaf:
+  friendly_name: 'Living Room Thermostat Has Leaf'
+  
+  hidden: True
+  homebridge_hidden: True
+
+
+binary_sensor.living_room_thermostat_is_locked:
+  friendly_name: 'Living Room Thermostat is Locked'
+  
+  hidden: True
+  homebridge_hidden: True
+
+
+binary_sensor.living_room_thermostat_is_using_emergency_heat:
+  friendly_name: 'Living Room Thermostat is using Emergency Heat'
+  
+  hidden: True
+  homebridge_hidden: True
+
+
+binary_sensor.living_room_thermostat_online:
+  friendly_name: 'Living Room Thermostat Online'
+  
+  hidden: True
+  homebridge_hidden: True
+
+
+binary_sensor.basement_motion:
+  friendly_name: 'Basement Motion Sensor'
+  
+  hidden: False
+  homebridge_hidden: true
+  icon: mdi:sensor

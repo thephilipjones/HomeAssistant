@@ -1,0 +1,48 @@
+philip:
+  name: Philip
+  view: no
+  entities:
+    - group.philip_iphone
+    - group.philip_ipad
+    # - group.philip_mbp
+    - device_tracker.philipmbp
+    # - group.silo_mbp
+    - device_tracker.silo2448
+
+philip_home:
+  name: Philip
+  view: no
+  entities:
+    - device_tracker.iphone_x
+
+philip_iphone:
+  name: Philip iPhone
+  view: no
+  entities:
+    - device_tracker.iphone_x
+    - sensor.iphone_x_battery_level
+    - sensor.iphone_x_battery_state
+
+philip_ipad:
+  name: Philip iPad
+  view: no
+  entities:
+    - sensor.philips_ipad_battery_level
+    - sensor.philips_ipad_battery_state
+    - device_tracker.philipsipad_2
+
+rachel:
+  name: Rachel
+  view: no
+  entities:
+    - group.rachel_iphone
+    # - group.rachel_macbook
+    - device_tracker.rachelsmacbook
+
+rachel_iphone:
+  name: Rachel iPhone
+  view: no
+  entities:
+    - sensor.iphone_battery_level
+    - sensor.rachelsiphone_battery_state
+

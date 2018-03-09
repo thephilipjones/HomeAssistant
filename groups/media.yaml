@@ -1,0 +1,10 @@
+media:
+  view: no
+  entities:
+    - media_player.atv_sunroom
+    - media_player.bedroom
+    - media_player.sunroom_tv
+    - group.all_remotes
+    # - remote.atv_sunroom
+    # - remote.bedroom
+    # - remote.harmony_hub

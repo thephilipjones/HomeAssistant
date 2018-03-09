@@ -2,12 +2,12 @@ homeassistant:
   name: Home
   latitude: !secret home_latitude
   longitude: !secret home_longitude
-  elevation: 80
+  elevation: !secret home_elevation
   unit_system: imperial
-  time_zone: America/New_York
+  time_zone: !secret home_time_zone
 
-#  customize: !include customize.yaml
   customize: !include_dir_merge_named customize
+#  customize: !include customize.yaml
   customize_glob:
     "sensor.dark_sky_*":
       homebridge_hidden: true
@@ -132,18 +132,26 @@ device_tracker:
 tts:
   - platform: google
 
-group: !include_dir_merge_named group
-# device_tracker: !include_dir_merge_list device_tracker
-sensor: !include_dir_merge_list sensor
-# automation: !include_dir_merge_list automation
-# scene: !include_dir_merge_list scene
-# switch: !include_dir_merge_list switch
-# script: !include_dir_merge_named script
-# input_boolean: !include_dir_merge_named input_boolean
-# shell_command: !include_dir_merge_named shell_command
+group: !include_dir_merge_named groups
+# group: !include groups.yaml
 
+# device_tracker: !include_dir_merge_list device_tracker
+
+sensor: !include_dir_merge_list sensor
+
+# automation: !include_dir_merge_list automation
+automation: !include automations.yaml
+
+# scene: !include_dir_merge_list scene
+
+# switch: !include_dir_merge_list switch
+
+# script: !include_dir_merge_named script
+script: !include scripts.yaml
+
+# input_boolean: !include_dir_merge_named input_boolean
 input_boolean: !include input_boolean.yaml
 
-# group: !include groups.yaml
-automation: !include automations.yaml
-script: !include scripts.yaml
+# shell_command: !include_dir_merge_named shell_command
+
+

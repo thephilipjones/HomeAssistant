@@ -1,0 +1,6 @@
+triggers:
+  name: Triggers
+  view: no
+  control: hidden
+  entities:
+    - input_boolean.home_stats

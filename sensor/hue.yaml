@@ -1,0 +1,7 @@
+  - platform: hue
+#  - platform: template
+#    sensors:
+#      basement_motion:
+#        friendly_name: "Basement Motion"
+#        entity_id: sensor.basement_motion_sensor
+#        value_template: "{{ states.sensor.basement_motion_sensor.attributes.motion }}"

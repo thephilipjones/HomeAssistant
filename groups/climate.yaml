@@ -1,0 +1,26 @@
+climate:
+  name: Climate
+  view: yes
+  entities:
+    - climate.living_room
+    - group.nest
+    - group.dark_sky
+    # - sensor.moon
+    # - binary_sensor.iss
+    # - sensor.launch_window
+    # - camera.wu_doppler_weather
+    - sensor.living_room_thermostat_humidity
+
+dark_sky:
+  name: Dark Sky
+  view: no
+  entities:
+    - sensor.dark_sky_cloud_coverage
+    - sensor.dark_sky_minutely_summary
+    - sensor.dark_sky_nearest_storm_distance
+    - sensor.dark_sky_precip_intensity
+    - sensor.dark_sky_daily_max_precip_intensity
+    - sensor.dark_sky_wind_speed
+    - sensor.dark_sky_humidity
+    - sensor.dark_sky_temperature
+    - sensor.dark_sky_uv_index

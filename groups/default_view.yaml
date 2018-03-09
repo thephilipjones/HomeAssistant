@@ -1,0 +1,4 @@
+#default_view:
+#  view: yes
+#  entities:
+#    - group.Hue
