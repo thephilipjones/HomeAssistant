@@ -2,28 +2,30 @@ system:
   name: System
   view: yes
   entities:
-    - group.home_assistant
-    - group.raspberry_pi
+    - group.system_monitor
+    - group.internet_speed
+    # - group.home_assistant
+    # - group.raspberry_pi
     - group.zwave
     - group.time
 
-home_assistant:
-  name: Home Assistant
-  view: no
-  entities:
-    - sensor.ha_installed_version
-    - sensor.ha_uptime
+# home_assistant:
+#   name: Home Assistant
+#   view: no
+#   entities:
+#     - sensor.ha_installed_version
+#     - sensor.ha_uptime
 
-raspberry_pi:
-  name: Raspberry Pi
-  view: no
-  entities:
-    - sensor.since_last_boot
-    - sensor.since_last_boot_templated
-    - sensor.speedtest_download
-    - sensor.speedtest_upload
-    - sensor.external_ip
-    - sensor.disk_use_percent_
+# raspberry_pi:
+#   name: Raspberry Pi
+#   view: no
+#   entities:
+#     - sensor.since_last_boot
+#     # - sensor.since_last_boot_templated
+#     - sensor.disk_use_percent_
+#     - sensor.speedtest_download
+#     - sensor.speedtest_upload
+#     - sensor.external_ip
 
 time:
   name: Time

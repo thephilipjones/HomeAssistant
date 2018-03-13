@@ -1,69 +1,57 @@
+device_tracker.iphone_x:
+  friendly_name: 'Philip iPhone'
+  hidden: True
+  homebridge_hidden: false
+
+device_tracker.rachel_iphone:
+  friendly_name: 'Rachel iPhone'
+  hidden: True
+  homebridge_hidden: true
+
 device_tracker.hue_hub:
   friendly_name: 'Hue Hub'
-  
   hidden: True
   homebridge_hidden: True
-
 
 # device_tracker.alexa_echo:
 device_tracker.downstairs_echo:
   friendly_name: 'Downstairs Echo'
-  
   hidden: True
   homebridge_hidden: True
   icon: False
-
 
 device_tracker.bedroom_echo:
   friendly_name: 'Bedroom Echo'
-  
   hidden: True
   homebridge_hidden: True
   icon: False
-
 
 device_tracker.basement_echo_dot:
   friendly_name: 'Basement Echo Dot'
-  
   hidden: True
   homebridge_hidden: True
   icon: False
 
-
 #device_tracker.hue_h_1:
 #  friendly_name: 'Hue H 1'
-#  
 #  hidden: True
 #  homebridge_hidden: True
 #  icon: False
 
-
 device_tracker.nest_living_room:
   friendly_name: 'Nest Living Room'
-  
   hidden: True
   homebridge_hidden: True
   icon: False
-
-
-device_tracker.rachel_iphone:
-  friendly_name: 'Rachel iPhone'
-  
-  hidden: True
-  homebridge_hidden: true
-
 
 device_tracker.unifi_ap:
-  friendly_name: 'Unifi Ap'
-  
+  friendly_name: 'Unifi AP'
   hidden: True
   homebridge_hidden: True
   icon: False
-
 
 device_tracker.withings_scale:
   friendly_name: 'Withings Scale'
-  
   hidden: True
   homebridge_hidden: True
   icon: False

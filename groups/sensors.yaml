@@ -2,9 +2,10 @@ back_door_sensor:
   name: Back Door
   view: no
   entities:
-    - binary_sensor.back_door_sensor
-    - sensor.alarm_level
-    - sensor.alarm_type
+    - binary_sensor.sensor
+    # - sensor.back_door_access_control
+    # - sensor.alarm_level
+    # - sensor.alarm_type
 
 living_room_sensor:
   name: Living Room
@@ -20,6 +21,13 @@ living_room_sensor:
     # - sensor.living_room_power_management
     # - sensor.living_room_sourcenodeid
 
+living_room_climate:
+  name: Living Room Climate
+  view: no
+  entities:
+    - sensor.living_room_temperature
+    - sensor.living_room_relative_humidity
+
 bedroom_sensor:
   name: Bedroom
   view: no
@@ -33,6 +41,13 @@ bedroom_sensor:
     # - sensor.bedroom_clock
     # - sensor.bedroom_power_management
     # - sensor.bedroom_sourcenodeid
+
+bedroom_climate:
+  name: Bedroom Climate
+  view: no
+  entities:
+    - sensor.bedroom_temperature
+    - sensor.bedroom_relative_humidity
 
 basement_sensor:
   name: Basement

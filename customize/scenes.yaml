@@ -1,4 +1,4 @@
-scene.all_off:
-  friendly_name: 'All Off'
+# scene.all_off:
+#   friendly_name: 'All Off'
   
-  hidden: False
+#   hidden: False

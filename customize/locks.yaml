@@ -1,0 +1,4 @@
+lock.front_door:
+  friendly_name: 'Front Door Lock'
+  hidden: False
+  homebridge_hidden: true

@@ -1,4 +1,4 @@
-downstairs_humdifier_switch:
+downstairs_humidifier_plug:
   name: Downstairs Humidifier
   view: no
   entities:
@@ -17,3 +17,16 @@ bedroom_plug:
     - sensor.plug_power
     - sensor.plug_previous_reading
     - sensor.plug_voltage
+
+bedroom_dimmer_switch:
+  name: Bedroom Switch
+  view: no
+  entities:
+    - sensor.bedroom_dimmer_switch
+
+downstairs_dimmer_switches:
+  name: Downstairs Switches
+  view: no
+  entities:
+    - sensor.downstairs_dimmer_switch
+    - sensor.hue_tap_switch_1

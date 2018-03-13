@@ -10,16 +10,18 @@ philip:
     - device_tracker.silo2448
 
 philip_home:
-  name: Philip
+  name: Philip Home
   view: no
   entities:
     - device_tracker.iphone_x
+    - device_tracker.4098ad1e443a
 
 philip_iphone:
   name: Philip iPhone
   view: no
   entities:
     - device_tracker.iphone_x
+    - device_tracker.4098ad1e443a
     - sensor.iphone_x_battery_level
     - sensor.iphone_x_battery_state
 
@@ -38,6 +40,12 @@ rachel:
     - group.rachel_iphone
     # - group.rachel_macbook
     - device_tracker.rachelsmacbook
+
+rachel_home:
+  name: Rachel Home
+  view: no
+  entities:
+    - device_tracker.58404e30ac8e
 
 rachel_iphone:
   name: Rachel iPhone

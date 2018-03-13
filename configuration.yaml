@@ -48,10 +48,11 @@ history:
   exclude:
     entities:
      - sensor.last_boot
-     - sensor.date
      - sensor.since_last_boot
-     - sensor.since_last_boot_templated
+    #  - sensor.since_last_boot_templated
+    #  - sensor.uptime
      - sensor.ha_uptime
+     - sensor.date
      - sensor.time
 
 cloud:
@@ -61,8 +62,9 @@ config:
 http:
   # Secrets are defined in the file secrets.yaml
   api_password: !secret http_password
-  # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
-  # base_url: example.duckdns.org:8123
+  ssl_certificate: !secret ssl_certificate
+  ssl_key: !secret ssl_key
+  base_url: !secret duckdns_url
 
 # Checks for available updates
 updater:
@@ -109,6 +111,10 @@ media_player:
   - platform: denonavr
   - platform: plex
 
+# remote:
+#   - platform: harmony
+#     name: Living Room TV
+
 nest:
   client_id: !secret nest_id
   client_secret: !secret nest_secret
@@ -140,7 +146,7 @@ group: !include_dir_merge_named groups
 sensor: !include_dir_merge_list sensor
 
 # automation: !include_dir_merge_list automation
-automation: !include automations.yaml
+# automation: !include automations.yaml
 
 # scene: !include_dir_merge_list scene
 

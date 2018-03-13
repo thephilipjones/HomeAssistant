@@ -1,0 +1,29 @@
+media_player.atv_sunroom:
+  friendly_name: 'ATV Sunroom'
+  hidden: False
+  homebridge_hidden: true
+
+media_player.bedroom:
+  friendly_name: 'ATV Bedroom'
+  hidden: False
+  homebridge_hidden: true
+
+media_player.sunroom_tv:
+  friendly_name: 'Sunroom TV'
+  hidden: False
+  homebridge_hidden: true
+
+remote.atv_sunroom:
+  friendly_name: 'ATV Sunroom'
+  hidden: False
+  homebridge_hidden: true
+
+remote.bedroom:
+  friendly_name: 'ATV Bedroom'
+  hidden: False
+  homebridge_hidden: true
+
+remote.harmony_hub:
+  friendly_name: 'Harmony Hub'
+  hidden: False
+  homebridge_hidden: true

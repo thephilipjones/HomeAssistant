@@ -43,3 +43,15 @@ basement_lights:
     - light.basement_1
     - light.basement_2
 
+sunroom_lights:
+  name: Sunroom Lights
+  view: no
+  entities:
+    - light.sunroom_1
+    - light.sunroom_2
+
+front_porch_lights:
+  name: Front Porch Lights
+  view: no
+  entities:
+    - light.front_porch_1

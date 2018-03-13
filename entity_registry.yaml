@@ -109,7 +109,7 @@ sensor.downstairs_humidifier_voltage:
 sensor.downstairs_humidifier_current:
   platform: zwave
   unique_id: 3-72057594093273410
-switch.downstairs_humidifier_switch:
+switch.downstairs_humidifier_plug:
   platform: zwave
   unique_id: 3-72057594093060096
 binary_sensor.bedroom_sensor:
@@ -190,3 +190,9 @@ sensor.zooz_zse08_contact_sensor_sourcenodeid:
 sensor.zooz_zse08_contact_sensor_access_control:
   platform: zwave
   unique_id: 6-72057594144637073
+sensor.philips_ipad_battery_level_2:
+  platform: ios
+  unique_id: level_ipad_mini
+sensor.philips_ipad_battery_state_2:
+  platform: ios
+  unique_id: state_ipad_mini

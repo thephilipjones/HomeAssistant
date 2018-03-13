@@ -1,6 +1,51 @@
-sensor.since_last_boot:
-  homebridge_hidden: True
+#### Wall switches
 
+sensor.bedroom_dimmer_switch:
+  friendly_name: "Bedroom Switch"
+  hidden: False
+  homebridge_hidden: true
+
+sensor.downstairs_dimmer_switch:
+  friendly_name: "Downstairs Switch"
+  hidden: False
+  homebridge_hidden: true
+
+sensor.hue_tap_switch_1:
+  friendly_name: "Kitchen Tap"
+  hidden: False
+  homebridge_hidden: true
+
+#### Hide sensor extras
+
+sensor.back_door_sourcenodeid:
+  hidden: True
+  homebridge_hidden: true
+
+sensor.bedroom_clock:
+  hidden: True
+  homebridge_hidden: true
+
+sensor.bedroom_power_management:
+  hidden: True
+  homebridge_hidden: true
+
+sensor.living_room_clock:
+  hidden: True
+  homebridge_hidden: true
+
+sensor.living_room_power_management:
+  hidden: True
+  homebridge_hidden: true
+
+sensor.living_room_sourcenodeid:
+  hidden: True
+  homebridge_hidden: true
+  
+#### system*.yaml
+
+sensor.since_last_boot:
+  homebridge_hidden: true
 
 sensor.since_last_boot_templated:
-  homebridge_hidden: True
+  homebridge_hidden: true
+

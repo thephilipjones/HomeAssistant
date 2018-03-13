@@ -17,3 +17,6 @@
 #    - visibility
 #    - ozone
     - uv_index
+    - hourly_summary
+    - apparent_temperature_max
+    - apparent_temperature_min

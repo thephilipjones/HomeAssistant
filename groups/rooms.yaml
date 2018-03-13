@@ -3,39 +3,67 @@ downstairs:
   view: yes
   entities:
     # - group.all_locks
+    - group.exterior_doors
     - lock.front_door
-    - group.back_door_sensor
-    - group.living_room_sensor
+    # - group.back_door_sensor
+    - binary_sensor.sensor
+    - group.living_room_climate
+    # - group.living_room_sensor
+    # - sensor.living_room_temperature
+    # - sensor.living_room_relative_humidity
+    # - sensor.living_room_luminance
+    - switch.downstairs_humidifier_plug
     - switch.downstairs_humidifier_switch
     - climate.living_room
     - group.nest
-    - group.media
+    - group.downstairs_media
     - group.downstairs_lights
+    - group.downstairs_dimmer_switches
 
 upstairs:
   name: Upstairs
   view: yes
   entities:
-   - group.upstairs_lights
+    - group.upstairs_lights
+    - group.bedroom
+    # - media_player.bedroom
+    # - remote.bedroom
 
 living_room:
   name: Living Room
   view: no
   entities:
     - group.living_room_lights
+    # - group.living_room_climate
+    # - group.living_room_sensor
+    - sensor.living_room_temperature
+    - sensor.living_room_relative_humidity
+    - sensor.living_room_luminance
+    - group.downstairs_media
+
+dining_room:
+  name: Dining Room
+  view: no
+  entities:
+    - group.dining_room_lights
 
 kitchen:
   name: Kitchen
   view: no
   entities:
     - group.kitchen_lights
+    - sensor.hue_tap_switch_1
 
 bedroom:
   name: Bedroom
   view: no
   entities:
     - group.bedroom_lights
-    - group.bedroom_sensor
+    # - group.bedroom_climate
+    # - group.bedroom_sensor
+    - sensor.bedroom_temperature
+    - sensor.bedroom_relative_humidity
+    - sensor.bedroom_luminance
     - group.bedroom_plug
     - media_player.bedroom
     - remote.bedroom
@@ -46,3 +74,30 @@ basement:
   entities:
     - group.basement_lights
     - group.basement_sensor
+
+sunroom:
+  name: Sunroom
+  view: no
+  entities:
+    - group.sunroom_lights
+    # - group.sunroom_climate
+    # - group.sunroom_sensor
+    # - sensor.sunroom_temperature
+    # - sensor.sunroom_relative_humidity
+    # - sensor.sunroom_luminance
+    - media_player.atv_sunroom
+    - remote.atv_sunroom
+
+front_porch:
+  name: Front Porch
+  view: no
+  entities:
+    - group.front_porch_lights
+
+exterior_doors:
+  name: Exterior Doors
+  view: no
+  entities:
+    - lock.front_door
+    # - group.back_door_sensor
+    - binary_sensor.sensor

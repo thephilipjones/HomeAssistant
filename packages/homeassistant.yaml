@@ -1,0 +1,266 @@
+###############################################################################
+#   @author         :   Mahasri Kalavala
+#   @date           :   04/15/2017
+#   @package        :   Home Assistant
+#   @description    :   Bunch of Sensors that are system or environment related
+###############################################################################
+homeassistant:
+  customize:  
+    package.node_anchors:
+      customize: &customize
+        package: 'homeassistant'
+
+      exposed: &exposed
+        <<: *customize
+        emulated_hue: true
+        homebridge_hidden: false
+        critical: true
+
+      not_exposed: &not_exposed
+        <<: *customize
+        emulated_hue: false
+        homebridge_hidden: true
+        critical: false
+
+      hidden: &hidden
+        hidden: true
+        critical: false
+
+    group.system_monitor:
+      order: 3
+    group.internet_speed:
+      order: 4
+
+    group.home_assistant_automations:
+      order: 50
+      
+    group.manuals:
+      order: 70
+    group.common_urls:
+      order: 71
+
+    binary_sensor.workday_sensor:
+      <<: *hidden
+
+    sensor.external_ip:
+      friendly_name: External IP Address
+
+# Speed Test Sensor
+    sensor.speedtest_ping:
+      friendly_name: Ping Speed
+
+    sensor.speedtest_upload:
+      friendly_name: Upload Speed
+
+    sensor.speedtest_download:
+      friendly_name: Download Speed
+
+# System Info Sensor
+    sensor.cpu_speed:
+      friendly_name: CPU Speed
+
+    sensor.cpu_used:
+      friendly_name: CPU Used
+
+    sensor.disk_free_:
+      friendly_name: Disk Free Space
+
+    sensor.ram_free:
+      friendly_name: Available Memory
+
+    sensor.ipv4_address_wlp1s10:
+      friendly_name: Local IP Address
+
+    sensor.last_boot:
+      friendly_name: Last Boot
+
+    sensor.since_last_boot:
+      friendly_name: Up Since
+     
+    sensor.signal_strength:
+      icon: mdi:signal
+
+    sensor.link_quality:
+      icon: mdi:link-variant
+
+    sensor.ha_installed_version:
+      icon: mdi:home-assistant
+    sensor.ha_current_version:
+      icon: mdi:home-assistant
+    sensor.ha_last_restart:
+      icon: mdi:home-assistant
+
+    automation.login_failure:
+      friendly_name: Alert Login Failures
+
+    automation.startup_notification:
+      friendly_name: Notify Startup Events
+      icon: mdi:thumb-up
+
+    automation.update_available_notification:
+      friendly_name: Notify of new updates
+      icon: mdi:update
+
+    script.update_hass:
+      friendly_name: Update Home Assistant
+      icon: mdi:home-assistant
+
+    script.restart_hass:
+      friendly_name: Restart Home Assistant
+      icon: mdi:home-assistant
+
+    sensor.my_domain:
+      hidden: true
+
+group:
+  system_monitor:
+    name: System Monitor
+    entities:
+      - sensor.cpu_used
+      - sensor.ram_free
+      - sensor.disk_free_
+      - sensor.ipv4_address_eth0
+      - sensor.ipv4_address_wlan0
+      - sensor.last_boot
+      - sensor.since_last_boot
+      - sensor.cpu_temperature
+      - sensor.signal_strength
+      - sensor.link_quality
+      - sensor.current_log_level
+      - sensor.ram_available
+      - sensor.processor_use
+      - sensor.memory_free
+      - binary_sensor.workday_sensor
+      - sensor.ha_installed_version
+      - sensor.ha_current_version
+      - sensor.home_assistant_up_time
+
+  internet_speed:
+    name: Internet Speed
+    entities:
+      - sensor.speedtest_ping 
+      - sensor.speedtest_upload
+      - sensor.speedtest_download
+      - sensor.external_ip
+ 
+script:
+  update_hass:
+    sequence:
+      - service: shell_command.update_hass
+  restart_hass:
+    sequence:
+      - service: shell_command.restart_hass
+
+shell_command:
+  restart_hass: >-
+    sudo systemctl restart home-assistant@homeassistant
+
+  update_hass: >-
+    sudo su -s /bin/bash homeassistant && source /srv/homeassistant/bin/activate && pip3 install --upgrade homeassistant && sudo systemctl restart home-assistant@homeassistant
+
+sensor:
+
+  - platform: uptime
+    name: Home Assistant Up Time
+    unit_of_measurement: hours
+
+  - platform: whois
+    domain: !secret namecheap_domain_name
+    name: My Domain
+
+  - platform: rest
+    resource: http://ip.jsontest.com
+    name: external_ip
+    value_template: '{{ value_json.ip }}'
+    scan_interval: 86400
+
+  - platform: command_line
+    name: CPU Temperature
+    command: cat /sys/class/thermal/thermal_zone0/temp
+    unit_of_measurement: 'F'
+    value_template: '{{ (value|int / 1000 * 1.8 + 32)|round(1) }}'
+
+  - platform: speedtest
+    minute: 30
+    hour:
+      - 0
+      - 6
+      - 12
+      - 18
+    monitored_conditions:
+      - ping
+      - download
+      - upload
+  
+  - platform: systemmonitor
+    resources:
+      - type: disk_use_percent
+        arg: /
+      - type: disk_free
+        arg: /
+      - type: memory_free
+      - type: processor_use
+      - type: ipv4_address
+        arg: eth0
+      - type: ipv4_address
+        arg: wlan0
+      - type: last_boot
+      - type: since_last_boot
+
+  - platform: rest
+    resource: https://pypi.python.org/pypi/homeassistant/json
+    name: HA Current Version
+    value_template: '{{ value_json.info.version }}'
+
+  - platform: command_line
+    name: HA Installed Version
+    command: /srv/homeassistant/bin/hass --version
+    scan_interval: 86400
+
+# automation:
+
+# # Notify me when I get a new public IP from my ISP
+# ######################################################
+
+#   - alias: Notify Of New External IP
+#     initial_state: true
+#     hide_entity: true
+#     trigger:
+#       platform: state
+#       entity_id: sensor.external_ip
+#     condition:
+#       - condition: template
+#         value_template: "{% if trigger.from_state and trigger.to_state %} true {% else %} false {% endif %}"
+#       - condition: template
+#         value_template: "{% if trigger.from_state.state == 'unknown' %} false {% else %} true {% endif %}"
+#       - condition: template
+#         value_template: "{% if trigger.to_state.state == 'unknown' %} false {% else %} true {% endif %}"
+#       - condition: template
+#         value_template: "{{ trigger.from_state.state != trigger.to_state.state }}"
+#     action:
+#       - service: script.notify_me
+#         data_template:
+#           message: "Your External IP changed from {{ trigger.from_state.state }} to {{ trigger.to_state.state }}"
+
+#   - alias: Update Available Notification
+#     initial_state: true
+#     hide_entity: true
+#     trigger:
+#       platform: state
+#       entity_id: updater.updater
+#     action:
+#       - service: script.notify_me
+#         data: {"message":"New HASS update is available. Please update!"}
+
+#   - alias: Remind domain renewal
+#     initial_state: true
+#     hide_entity: true
+#     trigger:
+#       - platform: numeric_state
+#         entity_id: sensor.my_domain
+#         below: 30
+#     action:
+#       - service: persistent_notification.create
+#         data:
+#           title: 'Domain Renew'
+#           message: 'It is time to renew your domain. The domain will expire in {{ states.sensor.my_domain.state  }} days.'

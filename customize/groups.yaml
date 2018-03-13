@@ -1,14 +1,4 @@
-group.home_assistant
-  order: 1
-
-group.raspberry_pi
-  order: 2
-
-group.zwave
-  order: 3
-
-group.time
-  order: 4
+#### default groups
 
 group.all_automations:
   friendly_name: 'All Automations'
@@ -23,6 +13,12 @@ group.all_devices:
 group.all_lights:
   friendly_name: 'All Lights'
   hidden: True
+  homebridge_hidden: true
+
+group.all_locks:
+  friendly_name: 'All Locks'
+  hidden: True
+  homebridge_hidden: true
 
 group.all_remotes:
   friendly_name: 'All Remotes'
@@ -37,70 +33,290 @@ group.all_scripts:
 group.all_switches:
   friendly_name: 'All Switches'
   hidden: False
+  homebridge_hidden: true
 
-group.bedroom_lights:
-  friendly_name: 'Bedroom Lights'
-  hidden: False
+#### automations.yaml
 
-group.dining_room_lights:
-  friendly_name: 'Dining Room Lights'
-  hidden: False
-
-group.exterior_lights:
-  friendly_name: 'Exterior Lights'
-  hidden: False
-
-group.home_modes:
-  friendly_name: 'Home Modes'
+group.automation:
   hidden: False
   homebridge_hidden: true
 
-group.interior_lights:
-  friendly_name: 'Interior Lights'
-  hidden: False
+#### climate.yaml
 
-group.kitchen_lights:
-  friendly_name: 'Kitchen Lights'
+group.climate:
   hidden: False
+  homebridge_hidden: true
+
+group.dark_sky:
+  hidden: False
+  homebridge_hidden: true
+
+group.dark_sky_forecast:
+  hidden: False
+  homebridge_hidden: true
+
+# group.weather:
+#   friendly_name: 'Weather'
+#   hidden: False
+#   homebridge_hidden: true
+
+#### default_view.yaml
+
+group.default_view:
+  hidden: False
+  homebridge_hidden: true
+
+#### lights.yaml
+
+group.downstairs_lights:
+  friendly_name: 'Downstairs Lights'
+  hidden: False
+  homebridge_hidden: true
 
 group.living_room_lights:
   friendly_name: 'Living Room Lights'
   hidden: False
+  homebridge_hidden: true
 
-group.media_players:
+group.dining_room_lights:
+  friendly_name: 'Dining Room Lights'
+  hidden: False
+  homebridge_hidden: true
+
+group.kitchen_lights:
+  friendly_name: 'Kitchen Lights'
+  hidden: False
+  homebridge_hidden: true
+
+group.bedroom_lights:
+  friendly_name: 'Bedroom Lights'
+  hidden: False
+  homebridge_hidden: true
+
+group.basement_lights:
+  friendly_name: 'Basement Lights'
+  hidden: False
+  homebridge_hidden: true
+
+group.sunroom_lights:
+  friendly_name: 'Sunroom Lights'
+  hidden: False
+  homebridge_hidden: true
+
+group.front_porch_lights:
+  friendly_name: 'Front Porch Lights'
+  hidden: False
+  homebridge_hidden: true
+
+# group.exterior_lights:
+#   friendly_name: 'Exterior Lights'
+#   hidden: False
+#   homebridge_hidden: true
+
+# group.home_modes:
+#   friendly_name: 'Home Modes'
+#   hidden: False
+#   homebridge_hidden: true
+
+# group.interior_lights:
+#   friendly_name: 'Interior Lights'
+#   hidden: False
+#   homebridge_hidden: true
+
+# group.outdoor_front_lights:
+#   friendly_name: 'Outdoor Front Lights'
+#   hidden: False
+#   homebridge_hidden: true
+
+# group.upstairs_lights:
+#   friendly_name: 'Upstairs Lights'
+#   hidden: False
+#   homebridge_hidden: true
+
+#### media.yaml
+
+group.media:
   friendly_name: 'Media Players'
   hidden: False
   homebridge_hidden: true
 
-group.network:
-  friendly_name: 'Network'
+#### motion.yaml
+
+group.motion:
+  friendly_name: 'Motion Detectors'
   hidden: False
   homebridge_hidden: true
 
-group.network_detail:
-  friendly_name: 'Network Detail'
+#### nest.yaml
+
+group.nest:
+  friendly_name: 'Nest'
   hidden: False
   homebridge_hidden: true
 
-group.outdoor_front_lights:
-  friendly_name: 'Outdoor Front Lights'
-  hidden: False
+#### people.yaml
 
-group.sensors:
-  friendly_name: 'Sensors'
+group.philip:
+  friendly_name: 'Philip'
   hidden: False
   homebridge_hidden: true
 
-group.switches:
-  friendly_name: 'Switches'
+group.philip_home:
+  friendly_name: 'Philip Home'
+  hidden: True
+  homebridge_hidden: true
+
+group.philip_iphone:
+  friendly_name: 'Philip iPhone'
   hidden: False
   homebridge_hidden: true
 
-group.upstairs_lights:
-  friendly_name: 'Upstairs Lights'
+group.philip_ipad:
+  friendly_name: 'Philip iPad'
   hidden: False
+  homebridge_hidden: true
 
-group.weather:
-  friendly_name: 'Weather'
+group.rachel:
+  friendly_name: 'Rachel'
+  hidden: False
+  homebridge_hidden: true
+
+group.rachel_iphone:
+  friendly_name: 'Rachel iPhone'
+  hidden: False
+  homebridge_hidden: true
+
+#### rooms.yaml
+
+group.downstairs:
+  friendly_name: 'Downstairs'
+  hidden: False
+  homebridge_hidden: true
+
+group.upstairs:
+  friendly_name: 'Upstairs'
+  hidden: False
+  homebridge_hidden: true
+
+group.living_room:
+  friendly_name: 'Living Room'
+  hidden: False
+  homebridge_hidden: true
+
+group.kitchen:
+  friendly_name: 'Kitchen'
+  hidden: False
+  homebridge_hidden: true
+
+group.bedroom:
+  friendly_name: 'Bedroom'
+  hidden: False
+  homebridge_hidden: true
+
+group.basement:
+  friendly_name: 'Basement'
+  hidden: False
+  homebridge_hidden: true
+
+group.sunroom:
+  friendly_name: 'Sunroom'
+  hidden: False
+  homebridge_hidden: true
+
+group.front_porch:
+  friendly_name: 'Front Porch'
+  hidden: False
+  homebridge_hidden: true
+
+group.exterior_doors:
+  friendly_name: 'Exterior Doors'
+  hidden: False
+  homebridge_hidden: true
+
+#### sensors.yaml
+
+# group.sensors:
+#   friendly_name: 'Sensors'
+#   hidden: False
+#   homebridge_hidden: true
+
+group.back_door_sensor:
+  friendly_name: 'Back Door'
+  hidden: False
+  homebridge_hidden: true
+
+group.living_room_sensor:
+  friendly_name: 'Living Room'
+  hidden: False
+  homebridge_hidden: true
+
+group.living_room_climate:
+  friendly_name: 'Living Room Climate'
+  hidden: False
+  homebridge_hidden: true
+
+group.bedroom_sensor:
+  friendly_name: 'Bedroom'
+  hidden: False
+  homebridge_hidden: true
+
+group.bedroom_climate:
+  friendly_name: 'Bedroom Climate'
+  hidden: False
+  homebridge_hidden: true
+
+group.basement_sensor:
+  friendly_name: 'Basement'
+  hidden: False
+  homebridge_hidden: true
+
+#### switches.yaml
+
+# group.switches:
+#   friendly_name: 'Switches'
+#   hidden: False
+#   homebridge_hidden: true
+
+group.downstairs_humidifier_plug:
+  friendly_name: 'Downstairs Humidifier'
+  hidden: False
+  homebridge_hidden: false
+
+group.bedroom_plug:
+  friendly_name: 'Bedroom Plug'
+  hidden: True
+  homebridge_hidden: false
+
+#### system.yaml
+
+group.system:
+  friendly_name: 'System'
+  hidden: False
+  homebridge_hidden: true
+
+group.home_assistant:
+  friendly_name: 'Home Assistant'
+  hidden: False
+  homebridge_hidden: true
+
+group.raspberry_pi:
+  friendly_name: 'Raspberry Pi'
+  hidden: False
+  homebridge_hidden: true
+
+group.time:
+  friendly_name: 'Time'
+  hidden: False
+  homebridge_hidden: true
+
+#### triggers.yaml
+
+group.triggers:
+  friendly_name: 'Triggers'
+  hidden: False
+  homebridge_hidden: true
+
+group.zwave:
+  friendly_name: 'Z-Wave'
   hidden: False
   homebridge_hidden: true

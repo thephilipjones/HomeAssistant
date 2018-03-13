@@ -2,3 +2,16 @@
 #  view: yes
 #  entities:
 #    - group.Hue
+
+ipad_view:
+  name: iPad
+  view: yes
+  entities:
+    - group.dark_sky_forecast
+    - group.rachel_home
+    - group.exterior_doors
+    - climate.living_room
+    - group.living_room_climate
+    - group.bedroom_climate
+    - switch.downstairs_humidifier_plug
+    - switch.downstairs_humidifier_switch
